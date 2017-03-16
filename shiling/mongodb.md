@@ -1,7 +1,7 @@
 # study
-studyspringboot mongodb
+  studyspringboot mongodb
 
-mongdb常用命令
+## mongdb常用命令
 
 mongo 进入命令行 或 mongo + 数据库名字
 show dbs 显示数据库列表
