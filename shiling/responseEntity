@@ -1,3 +1,6 @@
+##学习下载文件，推送文件回前台
+
+```
 public static ResponseEntity<byte[]> responseFile(String strFilePath)
         throws IOException
     {
@@ -21,3 +24,5 @@ public static ResponseEntity<byte[]> responseFile(String strFilePath)
         return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(oFile),
             headers, HttpStatus.OK);
     }
+    
+    ```
