@@ -11,5 +11,14 @@
 <li>gradlew assembleRelease 编译并打Release的包</li>
 </ul>
 
+### gradlew用于buildeclispe的bat脚本如下
+cd %~dp0
+call gradlew clean
+cd %~dp0
+
+cd %~dp0
+call gradlew eclipse
+cd %~dp0
+
 ## 学习springboot
 网址：https://spring.io/
