@@ -18,3 +18,7 @@ spring:
  <li>在mongodb解压的文件bin目录下增加一个data目录用于存储文件</li>
  <li>在bin目录下增加startService.bat脚本启动mongodb服务端<li>命令行：mongod.exe --port 30000 --dbpath data</li></li>
  <li>增加startClient.bat脚本启动mongodb的客户端<li>命令行：mongo.exe --port 30000</li></li>
+ 
+ ### springboot 中配置mongodb
+ 
+ 在application中要加上数据库配置注解？不然启动会报错
