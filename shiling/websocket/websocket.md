@@ -93,4 +93,6 @@ var socket = new SockJS('/endpointWisely'); //1
 
 （5）通过stompClient.send（）向地址为"/welcome"的服务器地址发起请求，与@MessageMapping里的地址对应。
 
+## 6.学习网站
 
+https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html
