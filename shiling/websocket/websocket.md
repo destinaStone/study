@@ -92,7 +92,33 @@ var socket = new SockJS('/endpointWisely'); //1
 （4）通过stompClient.subscribe（）订阅服务器的目标是'/topic/getResponse'发送过来的地址，与@SendTo中的地址对应。
 
 （5）通过stompClient.send（）向地址为"/welcome"的服务器地址发起请求，与@MessageMapping里的地址对应。
+### 6.后端发送消息
+```java
 
-### 6.学习网站
+@Component
+public class IppsWebScoketUtils
+{
+    private SimpMessagingTemplate simpMessagingTemplate;
+
+    @Autowired
+    public IppsWebScoketUtils(SimpMessagingTemplate oSimpMessagingTemplate)
+    {
+        this.simpMessagingTemplate = oSimpMessagingTemplate;
+    }
+
+    public void sendWs(String strTopic, String strDestinationPath,
+                       WsMessageVo wsMessageVo)
+    {
+        // this.simpMessagingTemplate.convertAndSendToUser(strTopic,
+        // strDestinationPath, wsMessageVo);
+        this.simpMessagingTemplate.convertAndSend("/topic/bbit", wsMessageVo);
+
+    }
+}
+
+```
+>使用convertAndSendToUser，能够发送点对点的消息，但是要求，ws前台订阅的地址必须是有“/user/”的前缀；
+
+### 7.学习网站
 
 https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html
