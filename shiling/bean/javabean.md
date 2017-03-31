@@ -51,3 +51,4 @@ public class IppsWebScoketUtils
  
  （1）@Configuration声明当前类是配置类；
  （2）@ComponentScan（“xx”）,自动扫描“xx”目录下的所有的的java文件添加了@Component,@Service,@Controller,@Repository的类为spring的bean;
+ (3) @PropertySource（“classpath:xx”）,properties配置文件xx；
