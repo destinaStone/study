@@ -46,3 +46,8 @@ public class IppsWebScoketUtils
  
  (1)通过注解@Component来声明IppsWebScoketUtils是spring的一个bean;
  (2)通过 @Autowired注解将SimpMessagingTemplate的一个实例给注入到了IppsWebScoketUtils中，这样就可以使用SimpMessagingTemplate的功能
+ 
+ ### 配置类
+ 
+ （1）@Configuration声明当前类是配置类；
+ （2）@ComponentScan（“xx”）,自动扫描“xx”目录下的所有的的java文件添加了@Component,@Service,@Controller,@Repository的类为spring的bean;
