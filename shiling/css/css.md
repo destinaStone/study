@@ -9,4 +9,7 @@
   <li>
     -webkit-transform:rotateY(180deg);//定义位移以及沿着Y轴旋转
   </li>
+    <li>
+    onselectstart="return false;";onselectstart的作用是取消鼠标选中蓝色框选效果
+  </li>
 </ul>
