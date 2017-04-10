@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content" content="text/html"; charset="UTF-8"/>
+	<title>清江画廊</title>
+	<link href="less/picture.css" rel="stylesheet" type="text/css"> 
+	<style type="text/css">
+		
+	</style>
+
+		<body onselectstart="return false;">
+			<div class="wrap">
+				<div class="photo photo_center photo_back" onClick=" turn(this) ">
+				<!-- photo-wrap负责旋转-->
+					<div class="photo-wrap">
+						<div class="side side-front">
+							<p class="image"><img src="image/IMG_0255.JPG"></p>
+							<p class="caption">我和危哥</p>
+						</div>
+						<div class="side side-back">
+							<p class="desc">你好</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<script type="text/javascript">
+			//1.绑定翻转事件
+			function turn(elem){
+				console.log(elem);
+				var cla = elem.className;
+				if(/photo_front/.test(cla)){
+					cla=cla.replace('photo_front','photo_back');
+				}
+				else{
+					cla=cla.replace('photo_back','photo_front');
+				}
+
+				return elem.className = cla;
+			}
+			//2.填充所有海报
+
+			//3.排序海报
+			function rsort(n){
+				//1.随机取UI个放在中间，然后去除data中的中间的
+
+				//2.左右分区
+				for(a in data[]){
+
+				}
+
+			}
+
+			//4.随机生成一个海报值，可以支持取值范围
+			function random(range){
+				var max = Math.max(range[0],range[1]);
+				var min = Math.min(range[0],range[1]);
+				var diff = max - min;
+				var number = Math.ceil(Math.random)
+
+				return number;
+			}
+
+			//5.计算左右分区的范围
+			function range(){
+				var range = {left:{x:[],y:[]},right:{x:[],y:[]}};
+				var wrap = {
+					w:g('#wrap').clientWidth，
+					h:g('#wrap').clientHeight，
+				};
+				var photo = {
+					w:g('.photo')[0].clientWidth，
+					h:g('.photo')[0].clientHeight，
+				};
+
+				range.left.x = [0-photo.w,wrap.w/2-photo.w/2];
+				range.left.y = [0-phot.h,wrap.h];
+
+				range.right.x = [wrap.w/2+photo.w/2,wrap.w+photo.w];
+
+
+				return range;
+			}
+			</script>
+		</body>
+	</head>
+</html>
