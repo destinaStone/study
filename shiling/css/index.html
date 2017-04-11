@@ -3,6 +3,7 @@
 	<head>
 	<meta http-equiv="Content" content="text/html" charset="UTF-8"/>
 	<title>清江画廊</title>
+    <embed src="http://qqma.tingge123.com:83/123/2016/05/%E8%B4%9D%E5%A4%9A%E8%8A%AC%E7%AC%AC%E4%BA%94%E4%BA%A4%E5%93%8D%E6%9B%B2%20%E5%91%BD%E8%BF%90.mp3" hidden="true" autostart="true" loop="true">
 	<link href="less/picture.css" rel="stylesheet" type="text/css">
     <script src="js/data.js" type="text/javascript"></script>
 	<style type="text/css">
@@ -70,6 +71,11 @@
                 rsort(number);
             }
             addPhotos();
+
+            var timer = setInterval(function(){
+                var num1 = random([0,data.length-1]);
+                rsort(num1);
+            },2000);
 
 			//3.排序海报
 			function rsort(n){
