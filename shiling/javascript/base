@@ -23,4 +23,12 @@ javascript 首要规则：将脚本放在底部；
 2.script加载多个文件的最佳实践
 <script type="text/javascript" src="http://xx.js&yy.js"></script>
 
+3.动态脚本元素
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.src = "xx.js";
+document.getElementsByTagName("head")[0].appendChild(script);
+
+4.在某一个方法中使用多次使用全局变量，例如document，则可以在该方法中先存一个变量，然后就只会去全局加载一次； 
+
 
