@@ -1,0 +1,12 @@
+1.<script>标签出现阻塞有页面其他脚本解析和执行；遇见script都是先执行script的内容然后在加载界面；
+例如：
+<html>
+<head></head>
+<body>
+<p>
+<script type="text/javascript">
+ document.write("The date is" + (new Date()).toDateString());
+</script>
+</p>
+</body>
+</html>
