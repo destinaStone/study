@@ -1,7 +1,11 @@
 1.<script>标签出现阻塞有页面其他脚本解析和执行；遇见script都是先执行script的内容然后在加载界面；
 例如：
 <html>
-<head></head>
+<head>
+<!--head 中可以放置script用于就加载界面依赖的外部文件例如js，以及 link标签用于加载外部的css和其他页面元素，
+但是放置在head中界面加载时是会停止渲染，浏览器在解析body标签之前，界面不会渲染，直到外部文件并行加载完成，界面会显示空白页，这样性能就很差，
+推荐：script标签加载放在body中，link，还可以放在head中-->
+</head>
 <body>
 <p>
 <script type="text/javascript">
@@ -10,3 +14,13 @@
 </p>
 </body>
 </html>
+
+javascript 首要规则：将脚本放在底部；
+
+提升文件加载的速度：可以将多个文件合并成一个，1个100K的文件比4个25K的文件加载更快；
+
+
+2.script加载多个文件的最佳实践
+<script type="text/javascript" src="http://xx.js&yy.js"></script>
+
+
