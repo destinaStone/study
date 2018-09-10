@@ -6,6 +6,8 @@ echart的yAxis中设置axisLabel : {show:false//可以控制纵轴是否显示}
 
 以下是柱子和折线的混合使用配置；
 http://echarts.baidu.com/echarts2/doc/example/mix1.html参考
+
+```
 option = {
     tooltip : {
         trigger: 'axis'
@@ -67,4 +69,5 @@ option = {
         }
     ]
 };
-                 
+    
+    ```
